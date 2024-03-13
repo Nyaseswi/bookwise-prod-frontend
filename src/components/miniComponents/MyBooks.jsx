@@ -9,7 +9,7 @@ const MyBooks = () => {
   useEffect(() => {
     const fetchMyBooks = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/book/mybooks",
+        "https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/book/mybooks",
         { withCredentials: true }
       );
       setMyBooks(data.books);
@@ -19,7 +19,7 @@ const MyBooks = () => {
 
   const deleteBookHandler = async (id) => {
     await axios
-      .delete(`http://localhost:4000/api/v1/book/delete/${id}`, {
+      .delete(`https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/book/delete/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

@@ -26,7 +26,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const { data } = await axios.get(
-          "http://localhost:4000/api/v1/user/myprofile",
+          "https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/user/myprofile",
           {
             withCredentials: true,
           }
@@ -43,7 +43,7 @@ const App = () => {
     };
     const fetchBooks = async () => {
       try{
-        const { data } = await axios.get("http://localhost:4000/api/v1/book/all",
+        const { data } = await axios.get("https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/book/all",
          { withCredentials: true }
          ); 
          setBooks(data.allBooks);
