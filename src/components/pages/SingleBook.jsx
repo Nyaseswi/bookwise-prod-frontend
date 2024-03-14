@@ -11,7 +11,7 @@ const SingleBook = () => {
     const getSingleBook = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:4000/api/v1/book/singlebook/${id}`,
+          `https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/book/singlebook/${id}`,
           { withCredentials: true }
         );
         setBook(data.book);

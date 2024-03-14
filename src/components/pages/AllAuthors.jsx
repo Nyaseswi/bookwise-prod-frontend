@@ -10,7 +10,7 @@ const AllAuthors = () => {
   useEffect(() => {
     const fetchAuthors = async () => {
       const { data } = await axios.get(
-        "http://localhost:4000/api/v1/user/authors",
+        "https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/user/authors",
         { withCredentials: true }
       );
       setAuthors(data.authors);

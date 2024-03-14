@@ -29,7 +29,7 @@ const UpdateBook = () => {
     const fetchBook = async () => {
       try {
         const { data } = await axios.get(
-          `http://localhost:4000/api/v1/book/singlebook/${id}`,
+          `https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/book/singlebook/${id}`,
           { withCredentials: true }
         );
         setTitle(data.book.title);
@@ -105,7 +105,7 @@ const UpdateBook = () => {
 
     try {
       const { data } = await axios.put(
-        `http://localhost:4000/api/v1/book/update/${id}`,
+        `https://lionfish-app-n4s9i.ondigitalocean.app/api/v1/book/update/${id}`,
         updatedBook,
         { withCredentials: true }
       );
